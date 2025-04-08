@@ -9,7 +9,7 @@ df = pd.read_csv(original_path)
 df['production_kg'] = df['production'] * 0.453592
 
 # Remove all rows from 2018 onward (i.e. keep only years < 2018)
-df['year']=df['year'] +10
+# ignore-deprecated->df['year']=df['year'] +10
 df = df[df['year'] < 2018]
 
 # Save the cleaned dataset to a new file
